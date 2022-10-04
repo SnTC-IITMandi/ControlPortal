@@ -1,12 +1,12 @@
-const Senate = require('./../models/senateModel');
+const Secretary = require('./../../models/gymkhana/secretaryModel');
 
 exports.getAll = async (req, res) => {
     try {
-        const allSenates =await Senate.find();
+        const allSecretaries =await Secretary.find();
         const context = {
             status: 'success',
             data: 
-                allSenates,
+                allSecretaries,
             
         };
 

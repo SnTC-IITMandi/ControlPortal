@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAll } = require('./../controllers/secretaryController');
+const { getAll } = require('./../../controllers/gymkhana/secretaryController');
 
 const router = express.Router()
 

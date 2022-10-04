@@ -1,4 +1,4 @@
-const News = require('./../models/newsModel');
+const News = require('./../../models/gymkhana/newsModel');
 
 exports.getAll = async (req, res, next) => {
     try {

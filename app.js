@@ -31,11 +31,11 @@ connectDB();
 
 // ALL ROUTES
 app.use("/", viewsRouter);
-app.use("/api/gymkhana/news", newsRouter);
-app.use("/api/gymkhana/hostels", hostelsRouter);
-app.use("/api/gymkhana/secretary", secretaryRouter);
-app.use("/api/gymkhana/societies", societiesRouter);
-app.use("/api/gymkhana/senate", senateRouter);
+app.use("/gymkhana/news", newsRouter);
+app.use("/gymkhana/hostels", hostelsRouter);
+app.use("/gymkhana/secretary", secretaryRouter);
+app.use("/gymkhana/societies", societiesRouter);
+app.use("/gymkhana/senate", senateRouter);
 
 // IF ROUTE NOT PRESENT THEN THIS WILL RUN
 app.all("*", (req, res) => {

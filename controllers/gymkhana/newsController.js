@@ -37,7 +37,7 @@ exports.addNews =async(req,res,next)=>{
             date:req.body.date,
             description:req.body.description
         })
-        res.render("gymkhana/news/news.ejs");
+        res.redirect("gymkhana/news");
     } catch (error) {
         console.log(error);
     }

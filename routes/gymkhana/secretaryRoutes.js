@@ -1,8 +1,12 @@
-const express = require('express');
-const { getAll } = require('./../../controllers/gymkhana/secretaryController');
+const express = require("express");
+const secretaryController = require("./../../controllers/gymkhana/secretaryController");
 
-const router = express.Router()
+const router = express.Router();
 
+router.route("/").get(secretaryController.getAll);
 
-router.route('/').get(getAll);
+router.route("/add").get(secretaryController.form);
+
+router.route("/add").post(secretaryController.createSec);
+
 module.exports = router;

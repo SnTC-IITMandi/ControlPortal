@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%= title %></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+    <body>
+        <section class="vh-80 gradient-custom">
+            <div class="container py-5 h-100">
+              <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                  <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                      <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">News Form</h3>
+                      <form  action="/" method="post" >
+          
+                        <div class="row">
+                            <label for="hostelName" class="form-label">Hostel Name</label>
+                            <select class="form-select" aria-label="Default select example" name="hostelName">
+                                <option selected>Open this select menu</option>
+                                <option value="Nako">Nako</option>
+                                <option value="Prashar">Prashar</option>
+                                <option value="3">Three</option>
+                                <option value="3">Three</option>
+                                <option value="3">Three</option>
+                                <option value="3">Three</option>
+                                <option value="3">Three</option>
+                                <option value="3">Three</option>
+                              </select>
+                        </div>
+          
+                        <div class="row">
+                          
+                           <div class="form-outline">
+                               <label class="form-label" for="date">date</label>
+                              <input type="date" id="date" class="datepicker form-control form-control-lg" data-date-format="mm-dd-yyyy" name="date"required />
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            </div>
+                            <!-- <label>Select Date: </label>
+<div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+    <input class="form-control" type="text" readonly />
+    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+</div> -->
+                        </div>
+                     <div class="row">
+                         <label class="form-label" for="description">Description</label>
+                        <div class="form-outline">
+                           
+                            <textarea  className="area" style="width: 100%;"rows="6" name='description' placeholder="Message"></textarea>
+                         </div>
+
+                     </div>
+          
+                        <div class="mt-4 pt-2">
+                          <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                        </div>
+          
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+</html>

@@ -1,4 +1,5 @@
 const express = require("express");
+const fileUpload = require("express-fileupload");
 const path = require("path");
 
 const connectDB = require("./config/db");
@@ -15,6 +16,7 @@ const hostelsRouter = require("./routes/gymkhana/hostelsRoutes");
 // INITIALIZING EXPRESS APP
 const app = express();
 app.use(express.json());
+app.use(fileUpload());
 
 // SETTING DEFAULT VIEW ENGINE
 app.set("view engine", "ejs");

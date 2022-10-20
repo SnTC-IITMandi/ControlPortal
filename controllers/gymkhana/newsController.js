@@ -42,6 +42,7 @@ exports.addNews =async(req,res,next)=>{
             description:req.body.description
         })
         res.render("gymkhana/news/news.ejs",context);
+
     } catch (error) {
         console.log(error);
     }

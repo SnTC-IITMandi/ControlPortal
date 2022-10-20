@@ -32,12 +32,17 @@ exports.form=async(req,res,next)=>{
 
 exports.addNews =async(req,res,next)=>{
     try {
+        const context = {
+            title: "news",
+            status: "success",
+        };
         News.create({
             title:req.body.title,
             date:req.body.date,
             description:req.body.description
         })
-        res.redirect("gymkhana/news");
+        res.render("gymkhana/news/news.ejs",context);
+
     } catch (error) {
         console.log(error);
     }

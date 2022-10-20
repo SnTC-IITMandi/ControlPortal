@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%= title %></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+    <body>
+        <section class="vh-80 gradient-custom">
+            <div class="container py-5 h-100">
+              <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                  <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                      <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Hostels Form</h3>
+                      <form  action="/" method="post" >
+          
+                        <div class="row mb-4">
+                          <div class="form-outline">
+                            <label for="hostelName" class="form-label">Hostel Name</label>
+                            <select class="form-select" aria-label="Default select example" name="hostelName">
+                                <option selected>Select Hostel</option>
+                                <option value="Nako">Nako</option>
+                                <option value="Prashar">Prashar</option>
+                                <option value="Suvalsar">Suvalsar</option>
+                                <option value="Chandrataal">Chandrataal</option>
+                                <option value="Beaskund">Beaskund</option>
+                                <option value="Gaurikund">Gaurikund</option>
+                                <option value="Surajtal">Suraj tal</option>
+                                <option value="Dashir">Dashir</option>
+                              </select>
+                            </div>
+                        </div>
+          
+                        <div class="row mb-4">
+                        <div class="form-outline">
+                               <label class="form-label" for="secname" >Enter Name</label>
+                               <input type="text"  class="form-control form-control-lg" name="secname" required/>
+                             </div>
+        
+                        </div>
+                     <div class="row ">
+                      
+                      <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                           <label class="form-label" for="post">Post</label>
+                           <select class="form-select" aria-label="Default select example" name="post">
+                            <option selected>Select post</option>
+                            <option value="General Secretary">General Secretary</option>
+                            <option value="Sports Secretary">Sports Secretary</option>
+                            <option value="Mess Secretary">Mess Secretary</option>
+                            <option value="Cultural Secretary">Cultural Secretary</option>
+                          </select>
+                         </div>
+       
+                       </div>
+                       
+                       <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                          <label class="form-label" for="secemail">Secretary Email</label>
+                          <input type="email"  class="form-control form-control-lg" name="secemail" required/>
+                         </div>
+       
+                       </div>
+                      
+
+                     </div>
+                     <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                          <label class="form-label" for="wardenname">Warden Name</label>
+                          <input type="text"  class="form-control form-control-lg" name="wardenname" required/>
+                         </div>
+       
+                       </div>
+                       <div class="col-md-6 mb-4 pb-2">
+                        <div class="form-outline">
+                          <label class="form-label" for="wardenemail">Warden Email</label>
+                          <input type="email"  class="form-control form-control-lg" name="Wardenemail" required/>
+                         </div>
+       
+                       </div>
+                      
+
+                     </div>
+          
+                        <div class="mt-4 pt-2">
+                          <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                        </div>
+          
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+</html>

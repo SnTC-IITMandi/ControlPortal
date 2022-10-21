@@ -9,10 +9,17 @@ const hostelSchema = new Schema({
             name: { type: String, required: true },
             post: { type: String, required: true },
             email: { type: String, required: true },
-            warden: { type: String },
-            warden_email: { type: String },
         },
     ],
+    warden: { 
+        name:{type:String, required: true },
+        email:{type:String, required: true },
+     },
+    assist_warden: { 
+        name:{type:String , required: true },
+        email:{type:String , required: true },
+     },
+    
 });
 
 const Hostels = mongoose.model('Hostel', hostelSchema);

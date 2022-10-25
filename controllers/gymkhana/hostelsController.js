@@ -37,19 +37,29 @@ exports.addhostels=async(req,res)=>{
             title:"hostel",
             status: 'success'
         };
-        Hostels.create({
+        secname=req.body.secname;
+        secpost=req.body.post;
+        secemail=req.body.secemail;
+        sec=[]
+        for(let i=0;i<(secname.length);i++){
+            sec.push({
+                name:secname[i],
+                post:secpost[i],
+                email:secemail[i]
+            })
+        }
+        const d= await Hostels.create({
             hostel_name:req.body.hostelname,
-            secretaries: [
-                {
-                    name: req.body.secname,
-                    post:req.body.post,
-                    email:req.body.secemail,
-                    warden:req.body.wardenname,
-                    warden_email:req.body.wardenemail,
-                },
-            ],
+            secretaries: sec,
+            warden :{ 
+                name:req.body.wardenname,
+                email:req.body.wardenemail,
+            },
+            assist_warden: { 
+                name:req.body.awardenname,
+                email:req.body.awardenemail,
+             }
         });
-        console.log("DATA SAVED");
         res.render("gymkhana/hostels/hostels.ejs", context);
     } catch (err) {
         console.log(err);

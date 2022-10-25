@@ -15,12 +15,12 @@
                   <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                     <div class="card-body p-4 p-md-5">
                       <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Hostels Form</h3>
-                      <form  action="/" method="post" >
+                      <form  action="/gymkhana/hostels/add" method="post" >
           
                         <div class="row mb-4">
                           <div class="form-outline">
                             <label for="hostelName" class="form-label">Hostel Name</label>
-                            <select class="form-select" aria-label="Default select example" name="hostelName">
+                            <select class="form-select" aria-label="Default select example" name="hostelname">
                                 <option selected>Select Hostel</option>
                                 <option value="Nako">Nako</option>
                                 <option value="Prashar">Prashar</option>
@@ -33,10 +33,49 @@
                               </select>
                             </div>
                         </div>
-          
-                        <div class="row mb-4">
+                        <div class="row">
+                          <div class="col-md-6 mb-4 pb-2">
+                            <div class="form-outline">
+                              <label class="form-label" for="wardenname">Warden Name</label>
+                              <input type="text"  class="form-control form-control-lg" name="wardenname" required/>
+                             </div>
+           
+                           </div>
+                           <div class="col-md-6 mb-4 pb-2">
+                            <div class="form-outline">
+                              <label class="form-label" for="wardenemail">Warden Email</label>
+                              <input type="email"  class="form-control form-control-lg" name="wardenemail" required/>
+                             </div>
+           
+                           </div>
+                          
+    
+                         </div>
+                         <div class="row">
+                          <div class="col-md-6 mb-4 pb-2">
+                            <div class="form-outline">
+                              <label class="form-label" for="wardenname">Assitant Warden Name</label>
+                              <input type="text"  class="form-control form-control-lg" name="awardenname" required/>
+                             </div>
+           
+                           </div>
+                           <div class="col-md-6 mb-4 pb-2">
+                            <div class="form-outline">
+                              <label class="form-label" for="wardenemail">Assitant Warden Email</label>
+                              <input type="email"  class="form-control form-control-lg" name="awardenemail" required/>
+                             </div>
+           
+                           </div>
+                          
+    
+                         </div>
+                        <div id="hostelform">
+                          <div id="0">
+                            <h4>1</h4>
+                            <hr/>
+                        <div class="row mb-4" >
                         <div class="form-outline">
-                               <label class="form-label" for="secname" >Enter Name</label>
+                               <label class="form-label" for="secname" > Secretary  Name</label>
                                <input type="text"  class="form-control form-control-lg" name="secname" required/>
                              </div>
         
@@ -45,7 +84,7 @@
                       
                       <div class="col-md-6 mb-4 pb-2">
                         <div class="form-outline">
-                           <label class="form-label" for="post">Post</label>
+                           <label class="form-label" for="post">Secretary Post</label>
                            <select class="form-select" aria-label="Default select example" name="post">
                             <option selected>Select post</option>
                             <option value="General Secretary">General Secretary</option>
@@ -67,27 +106,12 @@
                       
 
                      </div>
-                     <div class="row">
-                      <div class="col-md-6 mb-4 pb-2">
-                        <div class="form-outline">
-                          <label class="form-label" for="wardenname">Warden Name</label>
-                          <input type="text"  class="form-control form-control-lg" name="wardenname" required/>
-                         </div>
-       
-                       </div>
-                       <div class="col-md-6 mb-4 pb-2">
-                        <div class="form-outline">
-                          <label class="form-label" for="wardenemail">Warden Email</label>
-                          <input type="email"  class="form-control form-control-lg" name="Wardenemail" required/>
-                         </div>
-       
-                       </div>
-                      
-
                      </div>
-          
-                        <div class="mt-4 pt-2">
-                          <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+          </div>
+                        <div class="mt-4 ">
+                          <input class="btn btn-primary btn-lg mt-4" type="submit" value="Submit" />
+                          <input class="btn btn-primary btn-lg mt-4" onclick="addmore()"value="Add more Secretary" />
+                          <input class="btn btn-primary btn-lg mt-4" onclick="deletelast()"value="Delete last  Secretary" />
                         </div>
           
                       </form>
@@ -98,6 +122,61 @@
             </div>
           </section>
     </body>
+    <script>
+      var count=0;
+      function addmore(){
+        count+=1;
+        repeat=`<div id="${count}">\
+          <h4>${count+1}</h4>\
+          <hr/>\
+        <div class="row mb-4" >\
+                        <div class="form-outline">\
+                               <label class="form-label" for="secname" > Secretary  Name</label>\
+                               <input type="text"  class="form-control form-control-lg" name="secname" required/>\
+                             </div>\
+        
+                        </div>\
+                     <div class="row ">\
+                      
+                      <div class="col-md-6 mb-4 pb-2">\
+                        <div class="form-outline">\
+                           <label class="form-label" for="post">Secretary Post</label>\
+                           <select class="form-select" aria-label="Default select example" name="post">\
+                            <option selected>Select post</option>\
+                            <option value="General Secretary">General Secretary</option>\
+                            <option value="Sports Secretary">Sports Secretary</option>\
+                            <option value="Mess Secretary">Mess Secretary</option>\
+                            <option value="Cultural Secretary">Cultural Secretary</option>\
+                          </select>\
+                         </div>\
+       
+                       </div>\
+                       
+                       <div class="col-md-6 mb-4 pb-2">\
+                        <div class="form-outline">\
+                          <label class="form-label" for="secemail">Secretary Email</label>\
+                          <input type="email"  class="form-control form-control-lg" name="secemail" required/>\
+                         </div>
+       
+                       </div>\
+                      
+
+                     </div>\
+                     </div>`
+                     var form=document.getElementById(`hostelform`)
+                     form.innerHTML+=repeat;
+      }
+      function deletelast(){
+      if(count!=0){
+        var dele =document.getElementById(`${count}`);
+        dele.remove();
+        count-=1;
+      }
+      else{
+        alert("Only one input field remaining")
+      }
+    }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     
 </html>

@@ -1,0 +1,23 @@
+.duplicate-row{
+    margin: top 50px;
+    position: relative;
+    padding-right: 70px;
+}
+.duplicate-row .btn-remove{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    font-family: fontawesome;
+}
+
+label{
+    font-family:'Roboto' ;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+h4{
+    font-size:25px;
+    font-family: 'Roboto';
+    font-weight: 600;
+}

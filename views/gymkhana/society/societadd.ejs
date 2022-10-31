@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            <%= title %>
+        </title>
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+        </script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+            rel='stylesheet'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    </head>
+
+    <body>
+            <div class="col-xl-6">
+                <h4>Clubs</h4>
+            </div>
+            <div class="col-xl-6">
+                <div class="float-right">
+                    <input type="button" value="Add More" class="btn btn-primary" id="addmorebtn" />
+                </div>
+            </div>
+            
+            <div class="col-xl-12">
+                <form action="" class="MutipleRecord">
+                    
+                    <div class="row duplicate-row">
+                    
+                            <input type="button" value="&#xf014;" class="btn btn-danger btn-remove" />
+                        
+                        <div class="col-xl-3">
+                            <label for="">First Name</label>
+                            <input type="text" name="" id="" class="form-control" />
+                        </div>
+                        
+                        <div class="col-xl-3">
+                            <label for="">Last Name</label>
+                            <input type="text" name="" id="" class="form-control" />
+                        </div>
+                        <div class="col-xl-3">
+                            <label for="">Father's Name</label>
+                            <input type="text" name="" id="" class="form-control" />
+                        </div>
+                        <div class="col-xl-3">
+                            <label for="">Mother's Name</label>
+                            <input type="text" name="" id="" class="form-control" />
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+            </div>
+            
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("#addmorebtn").click(function(){
+                        $(".MutipleRecord .duplicate-row:last-child").clone().appendTo(".MutipleRecord");
+                    });
+                    
+                    $(document).on('click','.btn-remove',function(){
+                            if($(".MutipleRecord .duplicate-row").length > 1)
+                            {
+                                $(this).parents(".duplicate-row").remove();
+                            }
+                    });
+                    
+                });
+            </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%= title %>
+    </title>
+
+    
+
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+        rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    </script>
+
+
+</head>
+
+<body>
+    <section class="vh-80 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Create Secretary</h3>
+                            <form action="/gymkhana/society/add" method="post" enctype="multipart/form-data">
+
+                                <div class="row">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="society_name">Society Name </label>
+                                        <input name="society_name" type="text" class="form-control form-control-lg" id="name"
+                                            placeholder="society_name" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="name">Society Website </label>
+                                        <input name="society_website" type="text" class="form-control form-control-lg" id="society_website"
+                                            placeholder="society_website" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="council_name">Council Name</label>
+                                        <input name="council_name" type="text" class="form-control form-control-lg"
+                                            id="council_name" placeholder="council_name">
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="advisor_name">Advisor Name</label>
+                                        <input name="advisor_name" type="advisor_name" class="form-control form-control-lg" id="advisor_name"
+                                            placeholder="advisor_name" required>
+                                    </div>
+
+</div>
+                                <div class="row">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="advisor_email">Advisor Email</label>
+                                        <input name="advisor_email" type="advisor_email" class="form-control form-control-lg" id="advisor_email"
+                                            placeholder="advisor_email" required>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="coadvisor_name">Coadvisor Name</label>
+                                        <input name="coadvisor_name" type="coadvisor_name" class="form-control form-control-lg" id="coadvisor_name"
+                                            placeholder="coadvisor_name" required>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="coadvisor_name">Club </label>
+                                        <input name="coadvisor_name" type="coadvisor_name" class="form-control form-control-lg" id="coadvisor_name"
+                                            placeholder="coadvisor_name" required>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="coadvisor_name">Coadvisor Name</label>
+                                        <input name="coadvisor_name" type="coadvisor_name" class="form-control form-control-lg" id="coadvisor_name"
+                                            placeholder="coadvisor_name" required>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="coadvisor_name">Coadvisor Name</label>
+                                        <input name="coadvisor_name" type="coadvisor_name" class="form-control form-control-lg" id="coadvisor_name"
+                                            placeholder="coadvisor_name" required>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <h4>Multiple Record Insert</h4>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="float-right">
+                                            <input type="button" value="Add More" class="btn btn-primary" id="addmorebtn" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <form action="" class="MutipleRecord">
+
+<div class="row duplicate-row">
+                                        
+                                                <input type="button" value="&#xf014;" class="btn btn-danger btn-remove" />                                        
+                                                <div class="col-xl-3">
+                                                    <label for="name">name</label>
+                                                    <input type="text" name="name" id="name" class="form-control" placeholder="name"/>
+                                                </div>                                       
+                                                <div class="col-xl-3">
+                                                    <label for="email">email</label>
+                                                    <input type="email" name="email" id="email" class="form-control" placeholder="email" />
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <label for="coordinator">Cordinator</label>
+                                                    <input type="text" name="coordinator" id="coordinator" class="form-control" placeholder="coordinator"/>
+                                                </div>
+                                            
+                                            </div>
+                                        
+                                        </form>
+                                    </div>
+                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                                    <script>
+                                        $(document).ready(function(){
+                                            $("#addmorebtn").click(function(){
+                                                $(".MutipleRecord .duplicate-row:last-child").clone().appendTo(".MutipleRecord");
+                                            });
+                                
+                                            $(document).on('click','.btn-remove',function(){
+                                                if($(".MutipleRecord .duplicate-row").length > 1)
+                                                {
+                                                    $(this).parents(".duplicate-row").remove();
+                                                }
+                                            });
+                                        });
+                                    </script>
+                                
+                                </div>
+          
+                                <div class="mt-4 pt-2">
+                                    <input class="btn btn-primary btn-lg" type="submit" value="Create" />
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html> -->

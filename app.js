@@ -37,7 +37,7 @@ app.use("/", viewsRouter);
 app.use("/gymkhana/news", newsRouter);
 app.use("/gymkhana/hostels", hostelsRouter);
 app.use("/gymkhana/secretary", secretaryRouter);
-app.use("/gymkhana/societies", societiesRouter);
+app.use("/gymkhana/society", societiesRouter);
 app.use("/gymkhana/senate", senateRouter);
 
 // IF ROUTE NOT PRESENT THEN THIS WILL RUN
